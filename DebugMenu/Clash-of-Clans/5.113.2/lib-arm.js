@@ -17,7 +17,7 @@ var DebugInfoCtorPtr = 0x0049C24 + 1;
 var ToggleDebugMenuButtonButtonPressedPtr = 0x005016C + 1;
 
 var malloc = new NativeFunction(mallocPtr, 'pointer', ['int']);
-var free = new NativeFunction(freePtr, 'pointer', ['pointer']);
+var free = new NativeFunction(freePtr, 'void', ['pointer']);
 var fDebugMenuCtor = new NativeFunction(base.add(DebugMenuCtorPtr), "void", ["pointer"]);
 var fDebugInfoCtor = new NativeFunction(base.add(DebugInfoCtorPtr), "void", ["pointer"]);
 var fResourceListenerAddFile = new NativeFunction(base.add(ResourceListenerAddFilePtr), "void", ["pointer", "pointer"]);
